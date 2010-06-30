@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- <PropertyList include="p59-jsbsim-cnf.xml"> -->
+<PropertyList include="p59-yasim-cnf.xml">
+
+  <sim>
+    <description>Bell P 59 Airacomet</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+  </sim>
+
+</PropertyList>
+
