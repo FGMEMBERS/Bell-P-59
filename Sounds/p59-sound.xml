@@ -441,9 +441,9 @@
     </stall>
 
     <gun>
-      <name>Gun up left</name>
+      <name>Gun left 1</name>
       <mode>looped</mode>
-      <path>Aircraft/Gloster-Meteor/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Bell-P-59/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -460,9 +460,9 @@
     </gun>
 
     <gun>
-      <name>Gun up right</name>
+      <name>Gun left 2</name>
       <mode>looped</mode>
-      <path>Aircraft/Gloster-Meteor/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Bell-P-59/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -479,9 +479,9 @@
     </gun>
 
     <gun>
-      <name>Gun down left</name>
+      <name>Gun left 3</name>
       <mode>looped</mode>
-      <path>Aircraft/Gloster-Meteor/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Bell-P-59/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>
@@ -498,9 +498,9 @@
     </gun>
 
     <gun>
-      <name>Gun down left</name>
+      <name>Canon</name>
       <mode>looped</mode>
-      <path>Aircraft/Gloster-Meteor/Sounds/gunfire_1.wav</path>
+      <path>Aircraft/Bell-P-59/Sounds/gunfire_1.wav</path>
       <condition>
         <and>
           <property>controls/armament/trigger</property>

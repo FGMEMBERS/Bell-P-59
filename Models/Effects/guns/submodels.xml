@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <!-- Gauche extérieur -->
+  <submodel>
+    <name>left-up-tracer</name>
+    <model>Aircraft/Bell-P-59/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.6</delay>
+    <count>-1</count>
+    <x-offset> 18.22 </x-offset>    <!-- -5.552 m = 18.22 ft -->
+    <y-offset> -0.73 </y-offset>    <!--  0.222 m = -0.73 ft -->
+    <z-offset> -1.35 </z-offset>    <!-- -0.411 m = -1.35 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Bell-P-59/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!--Gauche milieu -->
+  <submodel>
+    <name>right-up-tracer</name>
+    <model>Aircraft/Bell-P-59/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.62</delay>
+    <count>-1</count>
+    <x-offset> 18.95 </x-offset>    <!-- -5.770 m = 18.95 ft -->
+    <y-offset> -0.45 </y-offset>    <!--  0.136 m = -0.45 ft -->
+    <z-offset> -1.52 </z-offset>    <!-- -0.463 m = -1.52 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Bell-P-59/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!--Gauche intérieur -->
+  <submodel>
+    <name>right-down-tracer</name>
+    <model>Aircraft/Bell-P-59/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.62</delay>
+    <count>-1</count>
+    <x-offset> 19.03 </x-offset>    <!-- -5.799 m = 19.03 ft -->
+    <y-offset> -0.03 </y-offset>    <!--  0.008 m = -0.03 ft -->
+    <z-offset> -1.36 </z-offset>    <!-- -0.416 m = -1.36 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Bell-P-59/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+  <!-- Canon -->
+  <submodel>
+    <name>left-down-tracer</name>
+    <model>Aircraft/Bell-P-59/Models/Effects/guns/apibullet-tracer.xml</model>
+    <trigger>controls/armament/trigger</trigger>
+    <speed>2460.0</speed>
+    <repeat>true</repeat>
+    <delay>0.6</delay>
+    <count>-1</count>
+    <x-offset> 19.12 </x-offset>    <!-- -5.828 m = 19.12 ft -->
+    <y-offset>  0.69 </y-offset>    <!-- -0.211 m =  0.69 ft -->
+    <z-offset> -1.69 </z-offset>    <!-- -0.516 m = -1.69 ft -->
+    <yaw-offset> 0.0 </yaw-offset>
+    <pitch-offset> 0.1 </pitch-offset>
+    <life>4.0</life>
+    <wind>false</wind>
+    <weight>0.07495</weight>
+    <cd>0.193</cd>
+    <eda>0.00571198</eda> 
+    <collision>true</collision>
+    <collision-report>sim/ai/aircraft/collision/gun</collision-report>
+    <impact>true</impact>
+    <impact-report>sim/ai/aircraft/impact/bullet</impact-report>
+    <submodel-path>Aircraft/Bell-P-59/Models/Effects/guns/bullet-submodel.xml</submodel-path>
+  </submodel>
+
+</PropertyList>

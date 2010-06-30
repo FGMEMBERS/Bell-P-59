@@ -25,6 +25,11 @@
       </livery>
     </model>
 
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Aircraft/Bell-P-59/Models/Effects/guns/submodels.xml</path>
+    </submodels>
+
     <multiplay>
       <chat_display>1</chat_display>
       <generic>
@@ -38,11 +43,6 @@
         <float n="1" alias="/instrumentation/doors/passenger/position-norm"/>
       </generic>
     </multiplay>
-
-    <submodels> 
-      <serviceable type="bool">true</serviceable>
-      <path>Aircraft/Bell-P-59/Models/effects/guns/submodels.xml</path>
-    </submodels>
 
     <help>
       <title>Bell P 59 Airacomet</title>

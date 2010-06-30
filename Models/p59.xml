@@ -15,6 +15,7 @@
 
   <animation>
     <object-name>fuselage</object-name>
+    <object-name>antenne</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -49,6 +50,7 @@
   <animation>
     <type>material</type>
     <object-name>fuselage</object-name>
+    <object-name>antenne</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -111,6 +113,7 @@
   <effect>
     <inherits-from>Aircraft/Generic/Effects/Fuselagereflect</inherits-from>
     <object-name>fuselage</object-name>
+    <object-name>antenne</object-name>
     <object-name>ailes</object-name>
     <object-name>aileronG</object-name>
     <object-name>aileronD</object-name>
@@ -169,6 +172,59 @@
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
       <z-m> 0 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Effets de tir -->
+  <!-- Gauche extérieur -->
+  <model>
+    <path>Aircraft/Bell-P-59/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -5.552 </x-m>
+      <y-m>  0.222 </y-m>
+      <z-m> -0.411 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Gauche milieu -->
+  <model>
+    <path>Aircraft/Bell-P-59/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -5.770 </x-m>
+      <y-m>  0.136 </y-m>
+      <z-m> -0.463 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Gauche intérieur -->
+  <model>
+    <path>Aircraft/Bell-P-59/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -5.799 </x-m>
+      <y-m>  0.008 </y-m>
+      <z-m> -0.416 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Canon -->
+  <model>
+    <path>Aircraft/Bell-P-59/Models/Effects/guns/fire.xml</path>
+    <offsets>
+      <x-m> -5.828 </x-m>
+      <y-m> -0.211 </y-m>
+      <z-m> -0.516 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> 180 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -688,6 +744,24 @@
       <x> 1 </x>
       <y> 0 </y>
       <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation de la roue avant en fonction de la gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>TrainAvant</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 25 </factor>
+    <center>
+      <x-m> -5.062 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.630 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
     </axis>
   </animation>
 
