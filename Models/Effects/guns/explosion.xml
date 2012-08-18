@@ -7,17 +7,13 @@
     <type>normal</type>
     <texture>smoke.png</texture>
 
-    <condition>
-      <property>controls/armament/trigger</property>
-    </condition>
-
-    <emissive>true</emissive>
-    <lighting>true</lighting>
-
-    <attach>local</attach>
+    <emissive> true      </emissive>
+    <lighting> true      </lighting>
+    <align>    billboard </align>  <!-- billboard / fixed -->
+    <attach>   world     </attach> <!-- world / local-->
 
     <placer>
-      <type>point</type> 
+      <type> point </type> <!-- sector / segments / point -->
     </placer>
 
     <shooter>
@@ -46,18 +42,16 @@
       </particles-per-sec>
     </counter>
       
-    <align>billboard</align>
-    
     <particle>
       <start>
         <color>
-          <red><value>   0.9 </value></red>
-          <green><value> 0.5 </value></green>
-          <blue><value>  0.0 </value></blue>
+          <red><value>   0.8 </value></red>
+          <green><value> 0.8 </value></green>
+          <blue><value>  0.1 </value></blue>
           <alpha><value> 0.3 </value></alpha>
         </color>
         <size>
-          <value> 0.01 </value>
+          <value> 0.3 </value>
         </size>
       </start>
       <end>
@@ -65,25 +59,25 @@
           <red><value>   0.8 </value></red>
           <green><value> 0.8 </value></green>
           <blue><value>  0.8 </value></blue>
-          <alpha><value> 1.0 </value></alpha>
+          <alpha><value> 0.9 </value></alpha>
         </color>
         <size>
-          <value> 0.15 </value>
+          <value> 20 </value>
         </size>
       </end>
         
       <life-sec>
-        <value> 0.10 </value>
+        <value> 0.2 </value>
       </life-sec>
         
-      <mass-kg>  0.25 </mass-kg>
-      <radius-m> 0.10 </radius-m>
+      <mass-kg>  0.001 </mass-kg>
+      <radius-m> 1.000 </radius-m>
     </particle>
       
     <program>
       <fluid>     air </fluid>
       <gravity> false </gravity>
-      <wind>    false </wind>
+      <wind>    true  </wind>
     </program>
       
   </particlesystem>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList include="p59-base.xml">
 
@@ -9,12 +9,6 @@
   <aero>p59-yasim</aero>
 
  </sim>
-
- <yasim>
-   <me262>
-     <pilot-lb>128</pilot-lb>
-   </me262>
- </yasim>
 
 </PropertyList>
 

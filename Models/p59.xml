@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
 
@@ -7,13 +7,28 @@
   <nasal>
     <load>
       var livery_update = aircraft.livery_update.new("Aircraft/Bell-P-59/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
     </load>
+
     <unload>
       livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
     </unload>
   </nasal>
 
   <animation>
+    <!-- Objets opaques -->
     <object-name>fuselage</object-name>
     <object-name>antenne</object-name>
     <object-name>ailes</object-name>
@@ -25,22 +40,22 @@
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>canope</object-name>
-    <object-name>trous</object-name>
-    <object-name>axeAH</object-name>
-    <object-name>axeAB</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
     <object-name>porteGI</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteDH</object-name>
     <object-name>porteDB</object-name>
     <object-name>porteDI</object-name>
-    <object-name>roueD</object-name>
     <object-name>moteurs</object-name>
-    <!-- Objets opaques -->
+
+    <object-name>trous</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>roueA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
 
     <!-- Objets transparents -->
     <object-name>vitres</object-name>
@@ -60,38 +75,26 @@
     <object-name>profondeur</object-name>
     <object-name>direction</object-name>
     <object-name>canope</object-name>
-    <object-name>axeAH</object-name>
-    <object-name>axeAB</object-name>
     <object-name>porteAG</object-name>
     <object-name>porteAD</object-name>
-    <object-name>roueA</object-name>
     <object-name>porteGH</object-name>
     <object-name>porteGB</object-name>
     <object-name>porteGI</object-name>
-    <object-name>roueG</object-name>
     <object-name>porteDH</object-name>
     <object-name>porteDB</object-name>
     <object-name>porteDI</object-name>
-    <object-name>roueD</object-name>
-    <object-name>trous</object-name>
     <object-name>moteurs</object-name>
+
+    <object-name>trous</object-name>
+    <object-name>axeAH</object-name>
+    <object-name>axeAB</object-name>
+    <object-name>roueA</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
 
     <property-base>sim/model/livery</property-base>
     <texture-prop>texture</texture-prop>
     <texture>texture.png</texture>
-<!--
-    <diffuse>
-      <red-prop>diffuse/red</red-prop>
-      <green-prop>diffuse/green</green-prop>
-      <blue-prop>diffuse/blue</blue-prop>
-    </diffuse>
-
-    <ambient>
-      <red-prop>ambient/red</red-prop>
-      <green-prop>ambient/green</green-prop>
-      <blue-prop>ambient/blue</blue-prop>
-    </ambient>
--->
     <specular>
       <red-prop>specular/red</red-prop>
       <green-prop>specular/green</green-prop>
@@ -103,11 +106,6 @@
       <green-prop>emission/green</green-prop>
       <blue-prop>emission/blue</blue-prop>
     </emission>
-<!--
-    <shininess>
-      <shininess-prop>shininess</shininess-prop>
-    </shininess>
--->
   </animation>
 
   <effect>
@@ -150,29 +148,17 @@
 
   <!-- Une ombre pour OSG -->
   <model>
-    <name>shadowOSG</name>
     <path>Aircraft/Bell-P-59/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.000 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m> -1.568 </z-m>
+    </offsets>
   </model>
-
-  <animation>
-    <type>select</type>
-    <object-name>shadowOSG</object-name>
-    <condition>
-      <equals>
-        <property>sim[0]/rendering/shadows-ai</property>
-        <value>true</value>
-      </equals>
-    </condition>
-  </animation>
 
   <!-- Intérieur -->
   <model>
     <path>Aircraft/Bell-P-59/Models/Interior/interior.xml</path>
-    <offsets>
-      <x-m> 0 </x-m>
-      <y-m> 0 </y-m>
-      <z-m> 0 </z-m>
-    </offsets>
   </model>
 
   <!-- Effets de tir -->
@@ -183,9 +169,7 @@
       <x-m> -5.552 </x-m>
       <y-m>  0.222 </y-m>
       <z-m> -0.411 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -196,9 +180,7 @@
       <x-m> -5.770 </x-m>
       <y-m>  0.136 </y-m>
       <z-m> -0.463 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -209,9 +191,7 @@
       <x-m> -5.799 </x-m>
       <y-m>  0.008 </y-m>
       <z-m> -0.416 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -222,9 +202,7 @@
       <x-m> -5.828 </x-m>
       <y-m> -0.211 </y-m>
       <z-m> -0.516 </z-m>
-      <roll-deg>    0 </roll-deg>
       <pitch-deg> 180 </pitch-deg>
-      <heading-deg> 0 </heading-deg>
     </offsets>
   </model>
 
@@ -892,3 +870,4 @@
   </model>
 
 </PropertyList>
+
