@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="p59-base.xml">
+
+ <sim>
+
+  <description>Bell P 59 Airacomet (YASim)</description>
+  <flight-model>yasim</flight-model>
+  <aero>p59-yasim</aero>
+
+ </sim>
+
+</PropertyList>
+
