@@ -2,9 +2,10 @@
 
 <PropertyList>
 
+  <!--Explosion -->
   <submodel>
     <name>bullet splash</name>
-    <model>Aircraft/Bell-P-59/Models/Effects/guns/explosion.xml</model>
+    <model>Aircraft/Bell-P-59/Models/Effects/guns/Explosion/explosion.xml</model>
     <speed>0</speed>
     <repeat>false</repeat>
     <delay>0</delay>
@@ -19,7 +20,7 @@
     <buoyancy>32.1</buoyancy>
     <aero-stabilised>false</aero-stabilised>
     <fuse-range>0</fuse-range>
-    <life>6</life>
+    <life>0.2</life>
   </submodel>
-
+  
 </PropertyList>

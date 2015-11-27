@@ -8,17 +8,12 @@
 
       <livery>
         <name type="string">P-59 Drone 1946 USAAF Reluctant Robot</name>
-        <texture>Liveries/59texture.png</texture>
+        <texture>Liveries/1024x1024/59texture.png</texture>
         <specular>
           <red>   0.05 </red>
           <green> 0.05 </green>
           <blue>  0.05 </blue>
         </specular>
-        <emission>
-          <red>   0.1 </red>
-          <green> 0.1 </green>
-          <blue>  0.1 </blue>
-        </emission>
       </livery>
     </model>
 

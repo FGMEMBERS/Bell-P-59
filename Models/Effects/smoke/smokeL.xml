@@ -12,11 +12,13 @@
     <condition>
       <and>
         <greater-than>
-          <property>/engines/engine[0]/n2</property>
+          <!-- /engines/engine[0]/n2 -->
+          <property>sim/multiplay/generic/float[6]</property>
           <value>50</value>
         </greater-than>
         <less-than>
-          <property>/position/altitude-ft</property>
+          <!-- /position/altitude-ft -->
+          <property>sim/multiplay/generic/float[3]</property>
           <value>3000</value>
         </less-than>
       </and>
@@ -34,7 +36,8 @@
       <phi-min-deg>-1.5</phi-min-deg>
       <phi-max-deg>1.5</phi-max-deg>
       <speed-mps>
-        <property>engines/engine/n1</property>
+        <!-- /engines/engine[0]/n1 -->
+        <property>sim/multiplay/generic/float[4]</property>
         <factor>5</factor>
       </speed-mps>
       <rotation-speed>
@@ -49,7 +52,8 @@
 
     <counter>
       <particles-per-sec>
-        <property>engines/engine/n1</property>
+        <!-- /engines/engine[0]/n1 -->
+        <property>sim/multiplay/generic/float[4]</property>
         <factor>1</factor>
         <spread>20</spread>
       </particles-per-sec>

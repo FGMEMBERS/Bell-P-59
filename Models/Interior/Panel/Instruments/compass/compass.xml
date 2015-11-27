@@ -14,18 +14,12 @@
     <object-name>vitre</object-name>
   </animation>
 
-  <animation>
-    <type>noshadow</type>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Bell-P-59/Models/Effects/Glass/glass</inherits-from>
     <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
+  </effect>
+  
   <animation>
     <type>material</type>
     <object-name>face</object-name>
@@ -43,9 +37,9 @@
     <object-name>compass</object-name>
     <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
     <center> 
-      <x-m> -0.043 </x-m>
-      <y-m>  0.000 </y-m>
-      <z-m>  0.012 </z-m>
+      <x-m> -0.02625 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.00737 </z-m>
     </center>
     <axis> 
       <x> 0 </x>

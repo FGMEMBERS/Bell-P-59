@@ -13,9 +13,9 @@
       var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
       var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
       
-      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
-      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
-    
+      var crew_door = self.getNode("sim/model/door-positions/crew/position-norm", 1);
+      var passenger_door = self.getNode("sim/model/door-positions/passenger/position-norm", 1);
+      
       crew_door.alias(float_0);
       passenger_door.alias(float_1);
     </load>
@@ -51,6 +51,7 @@
     <object-name>moteurs</object-name>
 
     <object-name>trous</object-name>
+    <object-name>interjet</object-name>
     <object-name>axeAH</object-name>
     <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
@@ -86,6 +87,7 @@
     <object-name>moteurs</object-name>
 
     <object-name>trous</object-name>
+    <object-name>interjet</object-name>
     <object-name>axeAH</object-name>
     <object-name>axeAB</object-name>
     <object-name>roueA</object-name>
@@ -100,12 +102,6 @@
       <green-prop>specular/green</green-prop>
       <blue-prop>specular/blue</blue-prop>
     </specular>
-
-    <emission>
-      <red-prop>emission/red</red-prop>
-      <green-prop>emission/green</green-prop>
-      <blue-prop>emission/blue</blue-prop>
-    </emission>
   </animation>
 
   <effect>
@@ -132,20 +128,19 @@
     <object-name>moteurs</object-name>
   </effect>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+  <!-- working for Rembrandt -->
+  <effect>
+    <inherits-from>Aircraft/Bell-P-59/Models/Effects/Glass/glass</inherits-from>
     <object-name>verriere</object-name>
     <object-name>vitres</object-name>
-  </animation>
-
-  <animation>
-    <type>noshadow</type>
+  </effect>
+  
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
     <object-name>verriere</object-name>
     <object-name>vitres</object-name>
-  </animation>
-
+  </effect>
+  
   <!-- Une ombre pour OSG -->
   <model>
     <path>Aircraft/Bell-P-59/Models/shadow.xml</path>
@@ -803,9 +798,23 @@
   </animation>
 
   <animation>
+    <type>pick</type>
+    <object-name>Canopy</object-name>
+    <visible>true</visible>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>nasal</command>
+        <script>doors.crew.toggle();</script>
+      </binding>
+    </action>
+  </animation>
+  
+  <animation>
     <type>translate</type>
     <object-name>Canopy</object-name>
-    <property>/instrumentation/doors/crew/position-norm</property>
+    <property>sim/model/door-positions/crew/position-norm</property>
     <factor> 0.7 </factor>
     <axis>
       <x> 1 </x>
@@ -843,6 +852,15 @@
   </model>
 
   <model>
+    <path>Aircraft/Bell-P-59/Models/light/StrobeLight.xml</path>
+    <offsets>
+      <x-m> -1.167 </x-m>
+      <y-m> -6.965 </y-m>
+      <z-m> -0.101 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
     <path>Aircraft/Bell-P-59/Models/light/GreenLight.xml</path>
     <offsets>
       <x-m> -1.267 </x-m>
@@ -852,16 +870,7 @@
   </model>
 
   <model>
-    <path>Aircraft/Bell-P-59/Models/light/StrobeWhite.xml</path>
-    <offsets>
-      <x-m> -1.167 </x-m>
-      <y-m> -6.965 </y-m>
-      <z-m> -0.101 </z-m>
-    </offsets>
-  </model>
-
-  <model>
-    <path>Aircraft/Bell-P-59/Models/light/StrobeWhite.xml</path>
+    <path>Aircraft/Bell-P-59/Models/light/StrobeLight.xml</path>
     <offsets>
       <x-m> -1.167 </x-m>
       <y-m>  6.965 </y-m>
@@ -870,4 +879,3 @@
   </model>
 
 </PropertyList>
-
