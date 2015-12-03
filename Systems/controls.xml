@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <armament>
+    <trigger type="bool">false</trigger>
+    <master-arm type="bool">true</master-arm>
+    <position-norm type="int">1</position-norm>
+  </armament>
+    
+  <lighting>
+    <instruments-norm>1</instruments-norm>
+  </lighting>
+  
+  <gear>
+    <brake-parking>1</brake-parking>
+    <tailwheel-lock type="bool">false</tailwheel-lock>
+  </gear>
+  
+  <!--  
+  <flight>
+    <elevator-trim>-0.02</elevator-trim>
+  </flight>
+  -->
+  
+</PropertyList>
